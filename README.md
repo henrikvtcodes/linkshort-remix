@@ -1,34 +1,13 @@
-# Welcome to Remix!
+# `linkshort` Version 2
+This is the repository for the second version of my cloudflare-based link shortener. The original one can be found [here](https://github.com/henrikvtcodes/linkshort) and is programmed using vanilla JS, a basic router called `itty-router` and uses Workers KV as its persistent storage.
 
-- [Remix Docs](https://remix.run/docs)
+### What's the Stack
+This new version will be much more feature rich and is built with:
+- **Remix**: A brand new SSR-focused React framework which I am super exicted to work with.
+- **Workers KV**: There's no reason to change this; it's imperceptibly fast and super simple.  
 
-## Development
+In the future, I can also see myself adding more to this. Most likely a simple authentication system, more feature-rich persistent db, and maybe some socket.io action.
 
-You will be running two processes during development:
-
-- The Miniflare server (miniflare is a local environment for Cloudflare Workers)
-- The Remix development server
-
-```sh
-# in one tab, start the remix dev server
-$ npm run dev
-
-# in another, start the miniflare server
-$ npm start
-```
-
-Open up [http://127.0.0.1:8787](http://127.0.0.1:8787) and you should be ready to go!
-
-If you'd rather run everything in a single tab, you can look at [concurrently](https://npm.im/concurrently) or similar tools to run both processes in one tab.
-
-## Deployment
-
-Use [wrangler](https://developers.cloudflare.com/workers/cli-wrangler) to build and deploy your application to Cloudflare Workers. If you don't have it yet, follow [the installation guide](https://developers.cloudflare.com/workers/cli-wrangler/install-update) to get it setup. Be sure to [authenticate the CLI](https://developers.cloudflare.com/workers/cli-wrangler/authentication) as well.
-
-If you don't already have an account, then [create a cloudflare account here](https://dash.cloudflare.com/sign-up) and after verifying your email address with Cloudflare, go to your dashboard and set up your free custom Cloudflare Workers subdomain.
-
-Once that's done, you should be able to deploy your app:
-
-```sh
-npm run deploy
-```
+#### Why a new version? Why Remix?
+There's one big reason that I decided to do this: flexibility. linkshort v1 is plenty fast, but I always wanted to be able to add extra features like React pages with realtime features, a simple api route for modifying available shortlinks, and maybe even a mini dashboard of sorts.  
+I'd been idly researching ways to hack together something to support the aforementioned features but when I saw the pre-announcement of remix generating buzz on dev-twitter, I knew on the spot it was perfect. While I love Next.js, it's definitely too ***thicc*** for this project. I feel that the combination of speed provided by Cloudflare's platform and the flexibility of a great new framework like Remix suporting Workers out of the box exactly fits the *modus operandi* of this project.
