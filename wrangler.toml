@@ -1,10 +1,15 @@
-name = "remix-cloudflare-workers"
+name = "linkshortv2"
 type = "javascript"
+compatibility_date = "2022-01-07"
 
 zone_id = ""
-account_id = ""
+account_id = "7e4350ac194d09e7cd8169bae403eef4"
 route = ""
 workers_dev = true
+
+kv_namespaces = [ 
+         { binding = "linkshort", preview_id = "79b3a079742e42269c588e8701c270c7", id = "bb47d4f72bd847978d2e22f52e635c68" }
+]
 
 [site]
 bucket = "./public"

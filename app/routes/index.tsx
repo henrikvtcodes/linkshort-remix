@@ -5,11 +5,9 @@ export default function Index(): JSX.Element {
       <ul>
         <li>
           <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
+            href="/adit"
           >
-            15m Quickstart Blog Tutorial
+            MY BOI ADIT
           </a>
         </li>
         <li>
